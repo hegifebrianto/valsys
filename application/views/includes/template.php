@@ -1,0 +1,4 @@
+<?=$header?>
+<?=$auth_message?>
+<?=$main_content?>
+<?=$footer?>

@@ -1,0 +1,40 @@
+/*
+	function insertCompany() {
+		parse_post($data);
+		//print_r($data);
+		Flight::db()->call("csal_insert_company",
+			"p_row_id",$data->company->row_id,
+			"p_prospect_nbr",$data->company->prospect_nbr,
+			"p_company",$data->company->company,
+			"p_created_by", $data->username, 
+			"po_message", 
+ 		function($output) {
+			$list = Flight::db()->get("SELECT ID, PROSPECT_NBR, COMPANY, ADDRESS, VERSION, CREATED_BY,LAST_ACTION, 
+										LAST_UPDATE, SHORT_LAST_UPDATE FROM CSAL_V_PROSPECT_LIST WHERE ID='$output'",false);			
+			$prospect = Flight::db()->get("SELECT * FROM CSAL_V_PROSPECT_DETAIL WHERE ROW_ID ='$output' ",false);
+			
+				echo to_json(array(
+					"status" => 200,
+					"list" =>$list,
+					"prospect" =>$prospect, 					
+				)); 	
+			}
+		);
+	}
+	
+	function updateCompany() {
+		parse_post($data);
+		Flight::db()->call("csal_update_company",
+			"p_row_id",$data->row_id,
+			"p_company",$data->company,
+			"p_updated_by", $data->username, 
+			"po_message", 
+ 		function($output) {
+				echo to_json(array(
+					"status" => 200,
+					"message"=> $output,			
+				)); 	
+			}
+		);
+	}
+	*/
